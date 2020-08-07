@@ -1,0 +1,88 @@
+repositories {
+    mavenCentral()
+}
+
+ext {
+	selenium = '3.141.59'
+	webdrivermanager = '4.1.0'
+	appium = '7.0.0'
+	dockerclient = '8.16.0'
+	phantomjsdriver = '1.4.4'
+	selenide = '5.6.0'
+	htmlunit = '2.36.0'
+	slf4j = '1.7.25'
+	logback = '1.2.3'
+	retrofit = '2.5.0'
+	javalin = '2.8.0'
+	okhttp = '3.14.2'
+	jnrffi = '2.1.9'
+	guava = '28.1-jre'
+
+	junitjupiter = '5.5.2'
+	mockito = '2.24.0' 
+	hamcrest = '1.3' 
+}
+
+apply plugin: 'java'
+apply plugin: 'eclipse'
+apply plugin: 'idea'
+
+jar {
+    baseName = 'selenium-jupiter'
+    version = '3.3.1-SNAPSHOT'
+}
+
+test {
+    useJUnitPlatform()
+
+    testLogging {
+        events "passed", "skipped", "failed"
+    }
+}
+
+compileTestJava {
+    sourceCompatibility = 1.8
+    targetCompatibility = 1.8
+    options.compilerArgs += '-parameters'
+}
+
+
+dependencies {
+    compile("org.seleniumhq.selenium:selenium-java:${selenium}")
+    compile("io.github.bonigarcia:webdrivermanager:${webdrivermanager}")
+    compile("io.appium:java-client:${appium}")
+    compile("com.spotify:docker-client:${dockerclient}")
+    compile("com.codeborne:phantomjsdriver:${phantomjsdriver}")
+    compile("com.codeborne:selenide:${selenide}") {
+       // exclude("io.github.bonigarcia:webdrivermanager")
+    }
+    compile("org.seleniumhq.selenium:htmlunit-driver:${htmlunit}")
+    compile("org.slf4j:slf4j-api:${slf4j}")
+    compile("com.squareup.retrofit2:retrofit:${retrofit}")
+    compile("com.squareup.retrofit2:adapter-rxjava:${retrofit}")
+    compile("com.squareup.retrofit2:converter-gson:${retrofit}")
+    compile("ch.qos.logback:logback-classic:${logback}")
+    compile("org.junit.jupiter:junit-jupiter-api:${junitjupiter}")
+    compile("io.javalin:javalin:${javalin}")
+    compile("com.squareup.okhttp3:okhttp:${okhttp}")
+    compile("com.github.jnr:jnr-ffi:${jnrffi}")
+    compile("com.google.guava:guava:${guava}")
+
+    
+    testCompile("org.seleniumhq.selenium:selenium-server:${selenium}")
+    testCompile("org.mockito:mockito-core:${mockito}")
+    testCompile("org.mockito:mockito-junit-jupiter:${mockito}")
+    testCompile("org.hamcrest:hamcrest-all:${hamcrest}")
+    
+    //testRuntimeOnly 'org.junit.platform:junit-platform-launcher'
+    
+    testCompile("org.junit.jupiter:junit-jupiter-engine:${junitjupiter}")
+    testCompile("org.junit.jupiter:junit-jupiter-params:${junitjupiter}")
+
+    testCompile("org.junit.jupiter:junit-jupiter-api:${junitjupiter}")
+
+    testCompile("org.junit.platform:junit-platform-launcher:${junitjupiter}")
+    testCompile("org.junit.platform:junit-platform-runner:${junitjupiter}")
+    
+    
+}
