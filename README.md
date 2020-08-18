@@ -147,3 +147,18 @@ dependencies {
 #  참조 
 https://www.softwaretestinghelp.com/docker-selenium-tutorial/
 
+
+7. 빌드 
+
+docker build -t selenium-jenkins .
+
+8. 실행 
+
+D:\app\jenkins\secrets
+
+docker run -d -p 80:8080 -p 50001:50000 -v /Users/mz03-jmryu/Downloads/jenkins:/var/jenkins_home --restart unless-stopped --name selenium-jenkins selenium-jenkins
+
+
+
+
+
