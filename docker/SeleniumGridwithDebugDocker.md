@@ -60,13 +60,20 @@ docker ps
 ```
 
 # 4. Integrate VNC viewer with docker containers.
+https://www.softwaretestinghelp.com/docker-selenium-tutorial/
+
+secret
 
 Enter your <ip address of your container>:<container port address> in vnc viewer search tab.
+
 0.0.0.0:9001
 0.0.0.0:9002
 
 
-selenoid
+
+
+
+secret
 
 
 # 5. Time to run tests!!
@@ -75,7 +82,7 @@ clean test -Dsurefire.suiteXmlFiles=Testng.xml
 ```
 
 # B6. Tear Down the infrastructure.
-$ docker-compose -f /path/to/docker-compose.yml down
+$ docker-compose -f docker-compose.yml down
 $ docker ps
 
 # TestClass.java
