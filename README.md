@@ -14,6 +14,7 @@ $ docker images
 
 4. docker-compose 사용하는 방법 
 
+```yaml
 version: "3"
 services:
   hub:
@@ -59,6 +60,7 @@ services:
       - "9002:5900"
     links:
       - hub
+```
 
 $ docker-compose -f docker-compose.yml up -d
 
@@ -67,6 +69,7 @@ $ docker ps
 http://localhost:4444/grid/console
 
 3. Configuring Testng.xml file.
+```xml 
 <!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd" >
 <suite thread-count="2" name="SeleniumGridDocker" parallel="tests">
 
@@ -87,7 +90,9 @@ http://localhost:4444/grid/console
 	</test>
 
 </suite>
+```
 
+```java
 @Parameters({"Port"})
 @BeforeClass
 public void initiateDriver(String Port) throws MalformedURLException {
@@ -101,6 +106,7 @@ public void initiateDriver(String Port) throws MalformedURLException {
         driver.manage().window().maximize();
     }
 }
+```
 
 
 4. Time to run tests!!
@@ -109,7 +115,9 @@ $ mvn clean test -Dsurefire.suiteXmlFiles=Testng.xml
 
 
 5. 
+
 https://www.realvnc.com/en/connect/download/viewer/
+
 secret
 
 
@@ -118,19 +126,22 @@ secret
 $ docker-compose -f docker-compose.yml down
 $ docker ps
 
-
+```xml 
 <dependency>
     <groupId>io.github.bonigarcia</groupId>
     <artifactId>selenium-jupiter</artifactId>
     <version>3.3.4</version>
     <scope>test</scope>
 </dependency>
+```
 
 # or in Gradle project:
 
+```java
 dependencies {
     testCompile("io.github.bonigarcia:selenium-jupiter:3.3.4")
 }
+```
 
 
 #  참조 
