@@ -37,7 +37,6 @@ public class SeleniumGrid {
         }
     }
     
-
     
     @Test
     public void GNBTest(ChromeDriver driver) {

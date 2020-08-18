@@ -4,11 +4,9 @@ import java.net.MalformedURLException;
 import java.net.URL;
 import java.util.concurrent.TimeUnit;
 
-import org.junit.jupiter.api.Test;
 import org.openqa.selenium.By;
 import org.openqa.selenium.Dimension;
 import org.openqa.selenium.WebDriver;
-import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.remote.DesiredCapabilities;
 import org.openqa.selenium.remote.RemoteWebDriver;
 
@@ -19,7 +17,9 @@ public class GridExample {
 	public static void main(String[]  args) throws MalformedURLException, InterruptedException{
 
  		String URL = "https://chicor.com/main";
+ 		
  		String Node = "http://localhost:4444/wd/hub";
+ 		
  		DesiredCapabilities cap = DesiredCapabilities.firefox();
 
  		driver = new RemoteWebDriver(new URL(Node), cap);
