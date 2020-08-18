@@ -2,18 +2,17 @@
 https://docs.docker.com/desktop/
 
 
-2. Pull the following docker images:
+2. 확인 
+$ docker images
 
+3. Pull the following docker images:
+* 2안으로 생략 
 $ docker pull selenium/hub
 $ docker pull selenium/node-chrome
 $ docker pull selenium/node-firefox
 
-3. 확인 
-$ docker images
-
-
 4. docker-compose 사용하는 방법 
-
+* 1안 사용  
 ```yaml
 version: "3"
 services:
@@ -62,7 +61,7 @@ services:
       - hub
 ```
 
-$ docker-compose -f docker-compose.yml up -d
+$ docker-compose -f docker-compose.yaml up -d
 
 $ docker ps
 
@@ -150,15 +149,17 @@ https://www.softwaretestinghelp.com/docker-selenium-tutorial/
 
 7. 빌드 
 
-docker build -t selenium-jenkins .
+docker build -t jenkins-seleniumgrid .    
+
 
 8. 실행 
 
 D:\app\jenkins\secrets
 
-docker run -d -p 80:8080 -p 50001:50000 -v /Users/mz03-jmryu/Downloads/jenkins:/var/jenkins_home --restart unless-stopped --name selenium-jenkins selenium-jenkins
+docker run -d -p 9090:8080 -p 50001:50000 -v /Users/mz03-jmryu/Downloads/jenkins:/var/jenkins_home --restart unless-stopped --name jenkins-seleniumgrid jenkins-seleniumgrid
 
 
 
+sudo apt-get install libnss3
 
 

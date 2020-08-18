@@ -1,6 +1,6 @@
 Selenium Grid with Debug Docker containers
 
-# docker-compose.yml
+# docker-compose.yaml
 ```yaml 
 version: "3"
 services:
@@ -54,7 +54,9 @@ services:
 
 cd /Users/mz03-jmryu/git/selenium-jupiter2/docker
 
-docker-compose -f docker-compose.yml up -d
+# docker-compose -f docker-compose.yaml up -d
+
+docker-compose  up -d
 
 docker ps
 ```
@@ -82,7 +84,7 @@ clean test -Dsurefire.suiteXmlFiles=Testng.xml
 ```
 
 # B6. Tear Down the infrastructure.
-$ docker-compose -f docker-compose.yml down
+$ docker-compose -f docker-compose.yaml down
 $ docker ps
 
 # TestClass.java
