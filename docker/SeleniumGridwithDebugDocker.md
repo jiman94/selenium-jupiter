@@ -51,7 +51,11 @@ services:
 3. Time to setup infrastructure!!
 
 ```sh 
-docker-compose -f /path/to/docker-compose.yml up -d
+
+cd /Users/mz03-jmryu/git/selenium-jupiter2/docker
+
+docker-compose -f docker-compose.yml up -d
+
 docker ps
 ```
 
@@ -60,6 +64,10 @@ docker ps
 Enter your <ip address of your container>:<container port address> in vnc viewer search tab.
 0.0.0.0:9001
 0.0.0.0:9002
+
+
+selenoid
+
 
 # 5. Time to run tests!!
 ```
