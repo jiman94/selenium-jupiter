@@ -30,7 +30,7 @@ public class TestClass {
             driver.manage().window().maximize();
         }
         else if(Port.equalsIgnoreCase("9002")){
-            driver = new RemoteWebDriver(new URL("http:l192.168.219.101:4444/wd/hub"), DesiredCapabilities.firefox());
+            driver = new RemoteWebDriver(new URL("http:192.168.219.101:4444/wd/hub"), DesiredCapabilities.firefox());
             driver.manage().window().maximize();
         }
 
