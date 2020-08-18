@@ -1,5 +1,5 @@
 # Getting jenkins image
-FROM jenkins/jenkins:2.235.5
+FROM jenkins/jenkins:2.235.3
 
 # Changing the user to root
 USER root
