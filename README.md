@@ -2,6 +2,10 @@
 https://docs.docker.com/desktop/
 
 
+How to Download & Install TestNG in Eclipse for Selenium WebDriver
+http://dl.bintray.com/testng-team/testng-eclipse-release/
+
+
 2. 확인 
 $ docker images
 
