@@ -1,18 +1,3 @@
-[![Maven Central](https://img.shields.io/maven-central/v/io.github.bonigarcia/selenium-jupiter.svg)](http://search.maven.org/#search%7Cga%7C1%7Cg%3Aio.github.bonigarcia%20a%3Aselenium-jupiter)
-[![Build Status](https://travis-ci.org/bonigarcia/selenium-jupiter.svg?branch=master)](https://travis-ci.org/bonigarcia/selenium-jupiter)
-[![Quality Gate](https://sonarcloud.io/api/project_badges/measure?project=io.github.bonigarcia:selenium-jupiter&metric=alert_status)](https://sonarcloud.io/dashboard/index/io.github.bonigarcia:selenium-jupiter)
-[![codecov](https://codecov.io/gh/bonigarcia/selenium-jupiter/branch/master/graph/badge.svg)](https://codecov.io/gh/bonigarcia/selenium-jupiter)
-[![badge-jdk](https://img.shields.io/badge/jdk-8-green.svg)](http://www.oracle.com/technetwork/java/javase/downloads/index.html)
-[![License badge](https://img.shields.io/badge/license-Apache2-green.svg)](http://www.apache.org/licenses/LICENSE-2.0)
-[![Backers on Open Collective](https://opencollective.com/selenium-jupiter/backers/badge.svg)](#backers)
-[![Sponsors on Open Collective](https://opencollective.com/selenium-jupiter/sponsors/badge.svg)](#sponsors)
-[![Support badge](https://img.shields.io/badge/stackoverflow-selenium_jupiter-green.svg)](https://stackoverflow.com/questions/tagged/selenium-jupiter?sort=newest)
-[![Twitter Follow](https://img.shields.io/twitter/follow/boni_gg.svg?style=social)](https://twitter.com/boni_gg)
-
-# Selenium-Jupiter [![][Logo]][GitHub Repository]
-
-*Selenium-Jupiter* is a [JUnit 5] extension aimed to ease the use of Selenium in JUnit 5 tests. This library is open source, released under the terms of [Apache 2.0 License].
-
 ## Table of contents
 
 1. [Motivation](#motivation)
@@ -26,13 +11,6 @@
 4. [Selenium-Jupiter server](#selenium-jupiter-server)
 5. [Help](#help)
 6. [About](#about)
-
-**Selenium-Jupiter** is being sponsored by the following tool; please help to support us by taking a look and signing up to a free trial:<br>
-<a href="https://tracking.gitads.io/?repo=selenium-jupiter"><img src="https://images.gitads.io/selenium-jupiter" alt="GitAds"/></a>
-
-## Motivation
-
-*Selenium-Jupiter* allows to execute Selenium from [JUnit 5] tests in an easy way. To do that, *Selenium-Jupiter* takes the most of several JUnit 5 features, such as [dependency injection for constructors and methods] and [test templates]. Moreover, *Selenium-Jupiter* provides seamless integration with [Docker], allowing to use different browsers (Chrome, Firefox, Opera, and even browsers in Android devices) in Docker containers in an effortless manner.
 
 
 ## Selenium-Jupiter as Java dependency
@@ -282,44 +260,3 @@ $ mvn exec:java -Dexec.args="server"
 > java -jar selenium-jupiter-3.3.4-fat.jar server
 [INFO] Selenium-Jupiter server listening on http://localhost:4042/wd/hub
 ```
-
-When the Selenium-Jupiter server is up and running, it acts as a regular Selenium Server for Docker browsers (Chrome, Firefox,. Opera, Android), and its URL can be used in tests using regular Selenium's ``RemoteWebDriver`` objects.
-
-
-## Help
-
-If you have questions on how to use *Selenium-Jupiter* properly with a special configuration or suchlike, please consider asking a question on [Stack Overflow] and tag it with  *selenium-jupiter*.
-
-
-## Backers
-
-Thank you to all our backers! [[Become a backer](https://opencollective.com/selenium-jupiter#backer)]
-
-<a href="https://opencollective.com/selenium-jupiter#backers" target="_blank"><img src="https://opencollective.com/selenium-jupiter/backers.svg?width=890"></a>
-
-## Sponsors
-
-Support this project by becoming a sponsor. Your logo will show up here with a link to your website. [[Become a sponsor](https://opencollective.com/selenium-jupiter#sponsor)]
-
-<a href="https://opencollective.com/selenium-jupiter/sponsor/0/website" target="_blank"><img src="https://opencollective.com/selenium-jupiter/sponsor/0/avatar.svg"></a>
-
-
-## About
-
-Selenium-Jupiter (Copyright &copy; 2017-2020) is a project by [Boni Garcia] licensed under [Apache 2.0 License]. Comments, questions and suggestions are always very [welcome][Selenium-Jupiter issues]!
-
-[Apache 2.0 License]: http://www.apache.org/licenses/LICENSE-2.0
-[Appium]: http://appium.io/
-[Boni Garcia]: http://bonigarcia.github.io/
-[dependency injection for constructors and methods]: https://junit.org/junit5/docs/current/user-guide/#writing-tests-dependency-injection
-[Docker]: https://www.docker.com/
-[Docker Engine]: https://www.docker.com/get-docker
-[GitHub Repository]: https://github.com/bonigarcia/selenium-jupiter
-[JUnit 5]: https://junit.org/junit5/docs/current/user-guide/
-[Logo]: http://bonigarcia.github.io/img/selenium-jupiter.png
-[Selenium WebDriver]: https://seleniumhq.github.io/docs/site/en/webdriver/
-[Selenium-Jupiter user guide]: https://bonigarcia.github.io/selenium-jupiter/
-[Selenium-Jupiter issues]: https://github.com/bonigarcia/selenium-jupiter/issues
-[Stack Overflow]: https://stackoverflow.com/questions/tagged/selenium-jupiter?sort=newest
-[test templates]: https://junit.org/junit5/docs/current/user-guide/#writing-tests-test-templates
-[WebDriverManager]: https://github.com/bonigarcia/webdrivermanager
