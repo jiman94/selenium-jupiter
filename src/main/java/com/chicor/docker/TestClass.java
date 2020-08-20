@@ -26,11 +26,11 @@ public class TestClass {
     public void initiateDriver(String Port) throws MalformedURLException {
         if(Port.equalsIgnoreCase("9001"))
         {
-            driver = new RemoteWebDriver(new URL("http:192.168.219.101:4444/wd/hub"), DesiredCapabilities.chrome());
+            driver = new RemoteWebDriver(new URL("http:174.100.144.174:4444/wd/hub"), DesiredCapabilities.chrome());
             driver.manage().window().maximize();
         }
         else if(Port.equalsIgnoreCase("9002")){
-            driver = new RemoteWebDriver(new URL("http:192.168.219.101:4444/wd/hub"), DesiredCapabilities.firefox());
+            driver = new RemoteWebDriver(new URL("http:174.100.144.174:4444/wd/hub"), DesiredCapabilities.firefox());
             driver.manage().window().maximize();
         }
 
